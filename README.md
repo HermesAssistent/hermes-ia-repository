@@ -1,54 +1,58 @@
-# Hermes IA - Assistente de Sinistro
+# 🤖 Hermes – Assistente Veicular
 
-## Descrição
+Hermes é um sistema modular composto por três serviços principais:
 
-Este repositório contém o código-fonte do Hermes IA, um chatbot assistente projetado para auxiliar no processo de relatórios de sinistros. O chatbot é construído com Python e a API do Google Gemini para fornecer uma interface de conversação inteligente.
+- 📡 **ApiRest**: API feita em **Java/Spring** para gerenciar os dados.  
+- 💻 **GUI**: Interface gráfica desenvolvida em **React**.  
+- 🧠 **ChatIA**: Chat conversacional com **Gemini (Google Generative AI)** feito em **Python/FastAPI**.  
 
-## Funcionalidades
+---
 
--   **Chatbot com IA:** Utiliza o Google Gemini para entender e responder às perguntas dos usuários de forma natural.
--   **Análise de Relatórios:** Capaz de processar e analisar informações de relatórios de sinistros em formato JSON.
--   **Interface de Linha de Comando:** Interação com o assistente diretamente do terminal.
+## ✅ Requisitos
 
-## Tecnologias Utilizadas
+- 🐍 **Python 3.10+**  
+- 📦 Bibliotecas Python necessárias:
+  - `fastapi`
+  - `requests`
+  - `google-generativeai`
 
--   **Linguagem:** Python 3
--   **IA e NLP:** Google Gemini API
--   **Bibliotecas Python:**
-    -   `google-generativeai`
+---
 
-## Como Executar o Projeto
+## 🚀 Como executar
 
-1.  **Clone o repositório:**
-    ```bash
-    git clone https://github.com/HermesAsistent/hermes-ia-repository.git
-    cd hermes-ia-repository
-    ```
+### ▶️ Rodando o servidor Python (ChatIA)
+Entre na pasta ChatIA, instale as dependências citadas acima e rode:
+```bash
+uvicorn assistente_sinistro:app --reload --host 0.0.0.0 --port 8000
+```
 
-2.  **Crie e ative um ambiente virtual:**
-    ```bash
-    python -m venv .venv
-    # Windows
-    .venv\Scripts\activate
-    # macOS/Linux
-    source .venv/bin/activate
-    ```
+🧪 Testando requisições
 
-3.  **Instale as dependências:**
-    ```bash
-    pip install google-generativeai python-dotenv
-    ```
+Você pode testar as requisições da API utilizando ferramentas como:  
 
-4.  **Configure sua chave de API:**
-    Crie um arquivo chamado `.env` na raiz do projeto e adicione sua chave da API do Google Gemini:
-    ```
-    GOOGLE_API_KEY="SUA_CHAVE_API_AQUI"
-    ```
-    O arquivo `assistente_sinistro.py` já está configurado para carregar essa variável de ambiente.
+- [Bruno](https://www.usebruno.com/downloads) 🧑‍💻  
+- [Postman](https://www.postman.com/) 📬  
+- [Insomnia](https://insomnia.rest/) 🌙  
+- Ou até mesmo via **curl** no terminal 🖥️  
 
-5.  **Execute o assistente:**
-    ```bash
-    python ChatIA/assistente_sinistro.py
-    ```
+📷 Exemplos de requisição no Bruno:  
 
+![Exemplo 1](assets/image.png)  
+![Exemplo 2](assets/image-1.png)  
 
+---
+
+### 🔹 Exemplo de requisição via curl
+```bash
+curl -X POST "http://localhost:8000/processar" \
+     -H "Content-Type: application/json" \
+     -d '{"texto": "Meu carro colidiu na Av. Paulista ontem"}'
+```
+
+## 📌 Observações importantes
+
+- 🔄 **Independência dos serviços:** O backend em **Spring Boot** e o serviço em **FastAPI** funcionam de forma independente.  
+- 🌐 **Comunicação:** A comunicação entre os serviços é feita via **HTTP/REST** utilizando **JSON**.  
+- 💾 **Banco de dados:** O **PostgreSQL** é utilizado como banco de dados pela API Java/Spring.  
+- 🎨 **Front-end:** O **React** é responsável pela interface que interage com os dois serviços.  
+- ✨ **Variável de ambiente:** Certifique-se de configurar a variável de ambiente `GEMINI_API_KEY` antes de rodar o serviço Python.
