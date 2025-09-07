@@ -10,13 +10,7 @@ model_pecas = genai.GenerativeModel(
     Sua única função é analisar um problema de veículo e, com base no modelo do carro, identificar a peça exata que precisa de reparo ou substituição.
     Seja conciso, direto e forneça apenas o nome e, se possível, a especificação da peça.
     Não gere relatórios, orçamentos, ou orientações. Foque 100% na identificação da peça.
-    """,
-    safety_settings={
-        "HARASSMENT": "BLOCK_NONE",
-        "HATE": "BLOCK_NONE",
-        "SEXUAL": "BLOCK_NONE",
-        "DANGEROUS": "BLOCK_NONE",
-    }
+    """
 )
 
 def analisar_e_diagnosticar(dados_sinistro):
