@@ -1,0 +1,21 @@
+{
+    "problema": "Arranhão na porta dianteira direita e farol danificado",
+    "local": "Condomínio Alfa, Avenida Carlos Dutra, 374",
+    "data": "2024-10-27",
+    "hora": "09:00",
+    "modelo_veiculo": "Honda",
+    "ano_fabricacao": "Desconhecido",
+    "placa": "ABC-1234",
+    "danos_veiculo": "Arranhão na porta dianteira direita e farol danificado",
+    "outros_envolvidos": false,
+    "feridos": false,
+    "possui_seguro": false,
+    "seguradora": null,
+    "cobertura": null,
+    "gravidade": "baixa",
+    "condicoes_climaticas": null,
+    "condicoes_via": null,
+    "testemunhas": null,
+    "autoridades_acionadas": null,
+    "veiculo_imobilizado": false
+}
