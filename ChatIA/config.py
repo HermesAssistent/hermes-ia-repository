@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Configuração da API do Gemini
-API_KEY = os.environ.get("GEMINI_API_KEY")
+API_KEY = 'CHAVE_AQUI'
 if not API_KEY:
     raise ValueError("A variável de ambiente GEMINI_API_KEY não foi definida.")
 
@@ -96,4 +96,4 @@ Estrutura obrigatória do JSON de saída:
 )
 
 # Configuração de serviços externos
-JAVA_SERVICE_URL = "http://localhost:8083/mensagens"
+JAVA_SERVICE_URL = "http://localhost:8090/v1/chat/receber-relato"
