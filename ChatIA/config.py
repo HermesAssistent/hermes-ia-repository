@@ -13,7 +13,7 @@ genai.configure(api_key=API_KEY)
 
 # Configuração do Modelo com a system_instruction e safety_settings
 MODEL = genai.GenerativeModel(
-    'gemini-1.5-flash',
+    'gemini-2.5-flash',
     system_instruction="""
 Você é Hermes, um assistente virtual especialista em seguros de automóveis.
 Sua única função é coletar dados de sinistros de forma conversacional e empática.
@@ -39,7 +39,8 @@ Regras de condução da conversa:
 - Perguntas opcionais ou detalhamentos só devem ser feitas se forem relevantes para o caso relatado.
 - Continue perguntando até obter todos os dados obrigatórios e os complementares relevantes.
 - Além de coletar os dados, categorize o problema do veículo em uma das seguintes opções: 'colisão', 'pane mecânica' ou 'outro'.
-- Somente após obter todas as informações necessárias, finalize a interação retornando apenas um objeto JSON válido, sem texto extra antes ou depois.
+- Somente após obter todas as informações necessárias, peça alguma foto para complementar o relatório.
+- Somente após isso, finalize a interação retornando apenas um objeto JSON válido, sem texto extra antes ou depois.
 
 Dados obrigatórios a coletar:
 - Descrição do problema (ex: colisão, pane mecânica, pneu furado).
