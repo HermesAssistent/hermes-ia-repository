@@ -72,6 +72,7 @@ Classificação de gravidade (automática):
 
 Estrutura obrigatória do JSON de saída:
 {
+  "tipo": "sinistroAutomotivo"
   "problema": "string",
   "local": "string",
   "data": "string (formato AAAA-MM-DD)",
